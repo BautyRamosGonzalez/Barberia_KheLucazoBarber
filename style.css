@@ -1,0 +1,147 @@
+/* Variables de colores basadas en tu logo y redes */
+:root {
+    --bg-dark: #121212;
+    --bg-card: #1e1e1e;
+    --text-light: #f5f5f5;
+    --purple-logo: #8a2be2;
+    --whatsapp-green: #25D366;
+    --ig-gradient: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    text-align: center;
+}
+
+/* Encabezado y Logo */
+header {
+    padding: 40px 20px 20px;
+    border-bottom: 3px solid var(--purple-logo);
+    background-color: #0a0a0a;
+}
+
+.logo-img {
+    max-width: 250px;
+    height: auto;
+    border-radius: 10px;
+}
+
+h1 {
+    color: var(--purple-logo);
+    font-size: 2em;
+    letter-spacing: 2px;
+    margin-top: 20px;
+    text-transform: uppercase;
+}
+
+/* Sección principal (Hero) */
+.hero {
+    padding: 50px 20px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+    color: #cccccc;
+}
+
+/* Botones */
+.btn {
+    display: inline-block;
+    padding: 15px 35px;
+    margin: 10px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    font-size: 1.1em;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+
+.btn-whatsapp {
+    background-color: var(--whatsapp-green);
+    border: 2px solid #1da851;
+}
+
+.btn-instagram {
+    background: var(--ig-gradient);
+    border: none;
+}
+
+/* Sección de Servicios */
+.services {
+    background-color: #161616;
+    padding: 50px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.service-card {
+    background-color: var(--bg-card);
+    border-left: 4px solid var(--purple-logo);
+    padding: 30px 20px;
+    width: 280px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+.service-card h3 {
+    color: var(--purple-logo);
+    margin-top: 0;
+}
+
+.service-card p {
+    color: #b3b3b3;
+    line-height: 1.5;
+}
+
+/* Pie de página (Footer) */
+footer {
+    padding: 40px 20px;
+    background-color: #0a0a0a;
+    border-top: 1px solid #333;
+}
+
+footer h2 {
+    color: var(--purple-logo);
+    margin-bottom: 20px;
+}
+
+.contact-info {
+    font-size: 1.1em;
+    line-height: 1.8;
+}
+
+/* Estilo del enlace de email */
+.contact-email {
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    background-color: #222;
+    border-radius: 5px;
+    transition: color 0.3s ease;
+}
+
+.contact-email:hover {
+    color: var(--purple-logo);
+}
+
+.copyright {
+    margin-top: 40px;
+    font-size: 0.9em;
+    color: #666;
+}

@@ -1,14 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Khe Lucazo Barber</title>
+    <title>KHE LUCASO BARBER - Tu barbería de confianza</title>
+    <!-- Aquí enlazamos el archivo CSS externo -->
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <h1>Khe Lucazo Barber</h1>
-    <p>Bienvenido a nuestra barberia</p>
-    
+
+    <!-- Encabezado con Logo -->
+    <header>
+        <!-- La imagen ahora está dentro de la carpeta 'imagenes' -->
+        <img src="imagenes/1000259354.jpg" alt="Logo Khe Lucaso Barber" class="logo-img">
+    </header>
+
+    <!-- Sección Principal -->
+    <section class="hero">
+        <h1>Tu barbería de confianza</h1>
+        <p>Asegurá tu turno de forma rápida y sencilla.</p>
+        
+        <!-- Enlaces a redes -->
+        <a href="#" class="btn btn-whatsapp" id="btnWsp">Reservar por WhatsApp</a>
+        <a href="#" class="btn btn-instagram" id="btnIg">Visitar Instagram</a>
+    </section>
+
+    <!-- Sección de Servicios -->
+    <section class="services">
+        <div class="service-card">
+            <h3>Corte Clásico y Fade</h3>
+            <p>Precisión absoluta con nuestras máquinas profesionales para lograr el mejor acabado y degradado.</p>
+        </div>
+        <div class="service-card">
+            <h3>Perfilado de Barba</h3>
+            <p>Relajate en nuestros sillones vintage mientras le damos la forma perfecta y el cuidado que tu barba necesita.</p>
+        </div>
+    </section>
+
+    <!-- Pie de página con Contacto -->
+    <footer>
+        <h2>Contacto</h2>
+        <div class="contact-info">
+            <p>
+                ✉️ Email: 
+                <a href="mailto:bautistaramos08@gmail.com" class="contact-email">
+                    bautistaramos08@gmail.com
+                </a>
+            </p>
+            <p>📍 Ubicación: González Catán</p>
+        </div>
+        
+        <p class="copyright">&copy; <span id="year"></span> Khe Lucaso Barber. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Algo de JavaScript básico -->
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        document.getElementById('btnWsp').addEventListener('click', function() {
+            console.log('Redirigiendo a WhatsApp...');
+        });
+    </script>
 </body>
 </html>
