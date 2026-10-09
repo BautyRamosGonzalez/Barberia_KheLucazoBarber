@@ -4,25 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KHE LUCASO BARBER - Tu barbería de confianza</title>
-    <!-- Aquí enlazamos el archivo CSS externo -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Encabezado con Logo -->
+    <!-- Encabezado con el nuevo fondo y el logo arreglado -->
     <header>
-        <!-- La imagen ahora está dentro de la carpeta 'imagenes' -->
-        <img src="imagenes/1000259354.jpg" alt="Logo Khe Lucaso Barber" class="logo-img">
+        <div class="logo-container">
+            <img src="imagenes/polo.webp" alt="Polo Barbería" class="polo-icon">
+            <div class="logo-text">
+                <span class="barberia-text">BARBERÍA</span>
+                <span class="khe-lucaso-text">KHE LUCASO</span>
+            </div>
+        </div>
     </header>
 
     <!-- Sección Principal -->
     <section class="hero">
-        <h1>Tu barbería de confianza</h1>
         <p>Asegurá tu turno de forma rápida y sencilla.</p>
-        
-        <!-- Enlaces a redes -->
         <a href="https://wa.me/5491163038052" class="btn btn-whatsapp" id="btnWsp">Reservar por WhatsApp</a>
         <a href="https://www.instagram.com/khe_lucaso.barber/?utm_source=ig_web_button_share_sheet" class="btn btn-instagram" id="btnIg">Visitar Instagram</a>
+    </section>
+
+    <!-- Sección de Información (Horarios y Precios) -->
+    <section class="info-section">
+        <div class="info-card">
+            <h2>HORARIOS</h2>
+            <div class="schedule">
+                <p><strong>LUNES A VIERNES</strong><br>9 a 22 hs</p>
+                <hr>
+                <p><strong>SÁBADOS</strong><br>8 a 23 hs</p>
+            </div>
+        </div>
+
+        <div class="info-card">
+            <h2>PRECIOS</h2>
+            <ul class="prices-list">
+                <li><span>Precio corte:</span> <strong>$10.000</strong></li>
+                <li><span>Promo 2x1:</span> <strong>%50 Descuento</strong></li>
+                <li><span>A Domicilio:</span> <strong>$12.000</strong></li>
+            </ul>
+        </div>
     </section>
 
     <!-- Sección de Servicios -->
@@ -53,10 +75,8 @@
         <p class="copyright">&copy; <span id="year"></span> Khe Lucaso Barber. Todos los derechos reservados.</p>
     </footer>
 
-    <!-- Algo de JavaScript básico -->
     <script>
         document.getElementById('year').textContent = new Date().getFullYear();
-
         document.getElementById('btnWsp').addEventListener('click', function() {
             console.log('Redirigiendo a WhatsApp...');
         });

@@ -1,4 +1,4 @@
-/* Variables de colores basadas en tu logo y redes */
+/* Variables de colores */
 :root {
     --bg-dark: #121212;
     --bg-card: #1e1e1e;
@@ -18,35 +18,57 @@ body {
     text-align: center;
 }
 
-/* Encabezado y Logo */
+/* Encabezado y Logo Separado (Flexbox) */
 header {
-    padding: 40px 20px 20px;
+    padding: 30px 5%;
     border-bottom: 3px solid var(--purple-logo);
+    /* Se agregó la imagen de fondo repitiéndose en todo el contenedor */
+    background: url('imagenes/fondo-pattern.png') center/cover;
     background-color: #0a0a0a;
 }
 
-.logo-img {
-    max-width: 250px;
-    height: auto;
-    border-radius: 10px;
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px; 
 }
 
-h1 {
+.polo-icon {
+    height: 70px;
+    width: auto;
+    /* Truco para borrar el fondo cuadriculado: sube el contraste, invierte los colores a blanco puro y fusiona. */
+    filter: grayscale(100%) contrast(1000%) invert(100%);
+    mix-blend-mode: screen;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.barberia-text {
+    font-size: 1em;
+    letter-spacing: 3px;
     color: var(--purple-logo);
+}
+
+.khe-lucaso-text {
     font-size: 2em;
-    letter-spacing: 2px;
-    margin-top: 20px;
-    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--purple-logo); /* Texto Violeta */
+    margin-top: -5px;
 }
 
 /* Sección principal (Hero) */
 .hero {
-    padding: 50px 20px;
+    padding: 40px 20px;
 }
 
 .hero p {
     font-size: 1.2em;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     color: #cccccc;
 }
 
@@ -79,6 +101,71 @@ h1 {
     border: none;
 }
 
+/* Sección de Información (Horarios y Precios) */
+.info-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+}
+
+.info-card {
+    background-color: var(--bg-card);
+    border-radius: 10px;
+    padding: 30px;
+    width: 300px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+.info-card h2 {
+    color: var(--text-light);
+    margin-top: 0;
+    font-size: 1.8em;
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* Horarios */
+.schedule p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #cccccc;
+}
+
+.schedule hr {
+    border: 0;
+    height: 1px;
+    background: #333;
+    margin: 15px 0;
+}
+
+/* Precios */
+.prices-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.prices-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid #333;
+    color: #cccccc;
+    font-size: 1.1em;
+}
+
+.prices-list li:last-child {
+    border-bottom: none;
+}
+
+.prices-list strong {
+    color: var(--text-light);
+}
+
 /* Sección de Servicios */
 .services {
     background-color: #161616;
@@ -95,7 +182,6 @@ h1 {
     padding: 30px 20px;
     width: 280px;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
 }
 
 .service-card h3 {
@@ -108,7 +194,7 @@ h1 {
     line-height: 1.5;
 }
 
-/* Pie de página (Footer) */
+/* Pie de página */
 footer {
     padding: 40px 20px;
     background-color: #0a0a0a;
@@ -125,7 +211,6 @@ footer h2 {
     line-height: 1.8;
 }
 
-/* Estilo del enlace de email */
 .contact-email {
     color: var(--text-light);
     text-decoration: none;
